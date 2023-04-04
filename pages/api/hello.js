@@ -123,7 +123,7 @@ export const trybers = [
 },
 {
   id:'12',
-  name: 'Débora Marim Conceição',
+  name: 'Débora Marim',
   turma: '27-B',
   types: ['JS', 'MySQL', 'React', 'Redux'],
   alias: 'Debs',
