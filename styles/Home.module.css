@@ -24,3 +24,13 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.inputs{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.nome{
+  width: 300px;
+}
