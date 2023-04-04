@@ -99,4 +99,37 @@ export const trybers = [
   frase: 'A vingança nunca é plena, mata a alma e a envenena',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U040JEJKZRP-15670d5bdf63-512',
 },
+{
+  id: '10',
+  name: 'Artur',
+  turma: '27-A',
+  types: ['JS', 'JAVA', 'SQL', 'TYPESCRIPT', 'NODE'],
+  alias: 'rutra',
+  animal: 'Cachorro',
+  cidade: 'Belo Horizonte -MG',
+  frase: 'Além de não ser fácil, ainda é difícil', 
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405RJ3KC2-6b2f9b6354c3-512'
+}, 
+{
+  id:'11',
+  name: 'Washington Gama',
+  turma: '24-A',
+  types: ['Javascript', 'Typescript', 'JAVA', 'Python', 'Portugol'],
+  alias: 'Cumpadi Wash',
+  animal: 'Corvo',
+  cidade: 'Feira de Santana - BA',
+  frase: 'Ximboca',
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03H9LED2BA-e762ff95c734-512'
+},
+{
+  id:'12',
+  name: 'Débora Marim Conceição',
+  turma: '27-B',
+  types: ['JS', 'MySQL', 'React', 'Redux'],
+  alias: 'Debs',
+  animal: 'Gato',
+  cidade: 'Santa Bárbara-MG',
+  frase: 'Feito é melhor que perfeito!',
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405NC490B-b5d317391482-512'
+},
 ]
