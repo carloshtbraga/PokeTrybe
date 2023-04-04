@@ -88,4 +88,15 @@ export const trybers = [
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U040JEBMYAV-e13db50858dd-512',
 
 },
+{
+  id: '09',
+  name: 'Rafaela Granato',
+  turma: '27-B',
+  types: ['JS'],
+  alias: 'Rafa',
+  animal: 'Gato',
+  cidade: 'Belo Horizonte-MG',
+  frase: 'A vingança nunca é plena, mata a alma e a envenena',
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U040JEJKZRP-15670d5bdf63-512',
+},
 ]
