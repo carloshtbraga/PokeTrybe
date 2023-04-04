@@ -2,13 +2,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
-    height: 150px;
-    margin-top: 2em;
+    background-color: #222222;
+    height: 100px;
+   
     border-top: 3px solid #111;
-    color: white;
+    color: lightgray;
 }
 
 .footer span{
     font-weight: bold;
+    color: #00a800;
+    
+}
+.footer p{
+    margin-right: .5em;
+    font-weight: bold;
+}
+
+.img{
+    border-radius: 5px;
 }

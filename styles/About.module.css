@@ -11,3 +11,19 @@
     margin: 0 auto 1.5em;
     line-height: 1.4em;
 }
+
+
+.us{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2em 0.2em;
+
+    margin: 0 1em;
+    width: 150px;
+    border-radius: 1em;
+    border: 2px solid rgb(0, 168, 0);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+    background-color: #333;
+    
+}

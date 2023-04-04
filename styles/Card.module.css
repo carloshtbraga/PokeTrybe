@@ -7,7 +7,7 @@
     margin-bottom: 2em;
     width: 24%;
     border-radius: 1em;
-    border: 2px solid rgb(0, 168, 0);
+    border: 2px solid #00a800;;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
     background-color: #333;
     color: #fff
@@ -15,7 +15,7 @@
 
 .card .id {
     margin: 1em 0;
-    background-color: rgb(0, 168, 0);
+    background-color: #00a800;
     border-radius: 5px;
     color: #fff;
     padding: 5px;
@@ -29,12 +29,13 @@
     text-transform: capitalize;
     margin-bottom: 1em;
     font-size: 1.4em;
+    color: lightgray;
 }
 
 .card .btn {
     text-decoration: none;
-    background-color: #fff;
-    color: #333;
+    background-color: lightgray;
+    color: black;
     padding: .7em 1.2em;
     border-radius: 3px;
     font-weight: bold;
@@ -42,6 +43,6 @@
 }
 
 .btn:hover {
-    background-color: rgb(0, 168, 0);
+    background-color: #00a800;;
     color: #fff;
 }

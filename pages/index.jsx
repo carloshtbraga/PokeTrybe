@@ -28,7 +28,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <div className={styles.bg}>
       <div className={styles.title_container}>
         <h1 className={styles.title}>Poke<span>Trybe</span></h1>
         
@@ -37,10 +37,11 @@ export default function Home() {
           width='50'
           height='50'
           alt='PokeNext'
+          className={styles.img}
         />
               </div>
       <div className={styles.inputs}>
-          <label htmlFor="oi">
+          <label htmlFor="oi" className={styles.nome}>
             <input
               type="text"
               id="oi"
@@ -53,6 +54,7 @@ export default function Home() {
           <select
             name=""
             id=""
+            className={styles.select}
             onChange={({ target }) => setSelectedType(target.value)}
             value={selectedType}
           >
@@ -66,6 +68,6 @@ export default function Home() {
           <Card trybers={trybers} key={trybers.id} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
