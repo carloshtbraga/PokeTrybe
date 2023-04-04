@@ -18,7 +18,7 @@ export default function Card({ trybers }) {
         height='150' />
       <p className={styles.id}>#{trybers.turma}</p>
       <h3 className={styles.title}>{trybers.name}</h3>
-      <Link legacyBehavior href={`/pokemon/${trybers.id}`}><a className={styles.btn}>Detalhes</a></Link>
+      <Link legacyBehavior href={`/tryber/${trybers.id}`}><a className={styles.btn}>Detalhes</a></Link>
     </div>
   )
 }
