@@ -35,17 +35,19 @@ export default function Trybe({ trybe }) {
         alt={trybe.name}
         className={styles.pic}
         />
+        <h3>Frase Favorita:</h3>
+          <p>"{trybe.frase}"</p>
         <div>
           <h3>Turma:</h3>
           <p>{trybe.turma}</p>
         </div>
         <div>
-          <h3>Tipo:</h3>
+          <h3>Habilidades:</h3>
           <div className={styles.types_container}>
             {trybe.types.map((item, index) => (
               <span
                 key={index}
-                className={`${styles.type} ${styles['type_' + item]}`}
+                className={`${styles.type}`} 
               >
                 {item}
               </span>
@@ -54,12 +56,14 @@ export default function Trybe({ trybe }) {
         </div>
         <div className={styles.data_container}>
           <div className={styles.data_height}>
-            <h4>Altura:</h4>
-            <p>{trybe.name} cm</p>
+            <h3>Animal favorito:</h3>
+    
+            <p>{trybe.animal}</p>
           </div>
           <div className={styles.data_weight}>
-            <h4>Peso:</h4>
-            <p>{trybe.name} kg</p>
+            <h3>Localização:</h3>
+           
+            <p>{trybe.cidade}</p>
           </div>
         </div>
       </div>

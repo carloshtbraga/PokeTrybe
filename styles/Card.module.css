@@ -40,8 +40,8 @@
 
 .card .btn {
     text-decoration: none;
-    background-color: lightgray;
-    color: black;
+    background-color: #222222;
+    color: lightgray;
     padding: .7em 1.2em;
     border-radius: 3px;
     font-weight: bold;

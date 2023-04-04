@@ -6,6 +6,8 @@ export const trybers = [
   types: ['html'],
   alias: 'Loreal',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405RK1T34-af9faf5ff4e2-512',
 },
 {
@@ -15,6 +17,8 @@ export const trybers = [
   types: ['html'],
   alias: 'GG Rotam',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03VD7NG1F0-001ff81bb6bf-512',
 },
 {
@@ -24,6 +28,8 @@ export const trybers = [
   types: ['html'],
   alias: 'Pablito',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03VD7VGUJ2-a55b511e9ca3-512',
 },
 {
@@ -33,6 +39,8 @@ export const trybers = [
   types: ['JS', 'PYTHON'],
   alias: 'Carlinhos',
   animal: 'Gato',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03V58S6N1M-b6285a992b40-512',
 },
 {
@@ -42,6 +50,8 @@ export const trybers = [
   types: ['JS', 'DART', 'FLUTTER', 'REACT'],
   alias: 'Matheus',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0402SH6VA9-d4e49b68b2a7-512',
 },
 {
@@ -51,6 +61,8 @@ export const trybers = [
   types: ['JS', 'PYTHON'],
   alias: 'alex === figma',
   animal: 'Gato',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://media.licdn.com/dms/image/D4D35AQEuPLe3Keksag/profile-framedphoto-shrink_800_800/0/1662480012893?e=1681174800&v=beta&t=vACEwqM5HRSQe5mRvlF9oX6r3yb2zdk5PwdqFUPz948',
 },
 {
@@ -60,6 +72,8 @@ export const trybers = [
   types: ['JS', 'PYTHON', 'JAVA', 'REACT', 'TYPESCRIPT'],
   alias: 'w2k',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405N9NUHH-aa36978f333c-512',
 },
 {
@@ -69,6 +83,8 @@ export const trybers = [
   types: ['JS', 'PYTHON', 'JAVA', 'C', 'C++'],
   alias: 'DaniBoy',
   animal: 'Cachorro',
+  cidade: 'Recife-PE',
+  frase: 'Xupa que é de Uva',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U040JEBMYAV-e13db50858dd-512',
 
 },
