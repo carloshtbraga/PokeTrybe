@@ -5,7 +5,7 @@ import styles from '../styles/Card.module.css'
 
 
 export default function Card({ trybers }) {
-  const myLoader=({src})=>{
+  const myLoader=()=>{
     return trybers.pic;
   }
   
@@ -15,7 +15,8 @@ export default function Card({ trybers }) {
         loader={myLoader}
         src={trybers.pic}
         width='150'
-        height='150' />
+        height='150' 
+        />
       <p className={styles.id}>#{trybers.turma}</p>
       <h3 className={styles.title}>{trybers.name}</h3>
       <Link legacyBehavior href={`/tryber/${trybers.id}`}><a className={styles.btn}>Detalhes</a></Link>
