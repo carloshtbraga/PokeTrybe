@@ -28,8 +28,8 @@ export const trybers = [
   types: ['html'],
   alias: 'Pablito',
   animal: 'Cachorro',
-  cidade: 'Recife-PE',
-  frase: 'Xupa que é de Uva',
+  cidade: 'Campinas-SP',
+  frase: 'Vai curíntia!',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03VD7VGUJ2-a55b511e9ca3-512',
 },
 {
