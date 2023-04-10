@@ -132,4 +132,15 @@ export const trybers = [
   frase: 'Feito é melhor que perfeito!',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405NC490B-b5d317391482-512'
 },
+{
+  id:'13',
+  name: 'Camilla Skaff',
+  turma: '27-B',
+  types: ['JS', 'MySQL', 'React', 'Redux'],
+  alias: 'Camilinha',
+  animal: 'Coelho',
+  cidade: 'São Paulo-SP',
+  frase: 'Bora pro rolê?',
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03V58N61AB-1b0bff9d4d37-512'
+},
 ]
