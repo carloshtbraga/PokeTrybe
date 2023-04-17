@@ -143,4 +143,15 @@ export const trybers = [
   frase: 'Bora comer!',
   pic: 'https://ca.slack-edge.com/TMDDFEPFU-U03V58N61AB-1b0bff9d4d37-512'
 },
+{
+  id:'14',
+  name: 'Maíza Dantas',
+  turma: '27-A',
+  types: ['JS', 'MySQL', 'React', 'Redux'],
+  alias: 'MDV',
+  animal: 'Bulbassauro - Polho',
+  cidade: 'Rio de Janeiro-RJ',
+  frase: 'O importante, é o que importa',
+  pic: 'https://ca.slack-edge.com/TMDDFEPFU-U0405N0RULB-de604556223f-512'
+},
 ]
