@@ -56,14 +56,14 @@ export const trybers = [
 },
 {
   id: '06',
-  name: 'Alex Souza',
+  name: 'Alex Nunes',
   turma: '27-B',
   types: ['JS', 'PYTHON'],
   alias: 'alex === figma',
   animal: 'Gato',
   cidade: 'Recife-PE',
   frase: 'Xupa que é de Uva',
-  pic: 'https://media.licdn.com/dms/image/D4D35AQEuPLe3Keksag/profile-framedphoto-shrink_800_800/0/1662480012893?e=1681174800&v=beta&t=vACEwqM5HRSQe5mRvlF9oX6r3yb2zdk5PwdqFUPz948',
+  pic: 'https://media.licdn.com/dms/image/D4D35AQEuPLe3Keksag/profile-framedphoto-shrink_200_200/0/1662480012893?e=1682305200&v=beta&t=G1_BD4r5cxDkY3RzxeIhrcaEbtiM5TcijztTOvoBxiw',
 },
 {
   id: '07',
