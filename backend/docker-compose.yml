@@ -1,0 +1,41 @@
+version: "3.1"
+
+services:
+    # serviço que vai rodar o node
+    node:
+        # imagem base do contâiner
+        build: .
+        user: node
+        container_name: trybedex_backend
+        # inicia a imagem em modo interativo, com o terminal aberto e executa o comando npm run dev
+        tty: true
+        stdin_open: true
+        command: npm run dev
+        image: trybedex
+        # reinicia a imagem caso ela pare
+        restart: always
+        # monta o diretório atual dentro do diretório /app do contâiner
+        volumes:
+            - ./:/app
+        # só inicia depois que o db iniciar
+        depends_on:
+            - db
+        # expõe as portas da aplicação
+        ports:
+            - 3000:3000
+        # configura variáveis de ambiente
+        environment:
+            DB_USER: root
+            DB_PASSWORD: password
+            DB_HOST: db
+            DB_PORT: 3306
+            DB_NAME: Trybedex
+
+    db:
+        container_name: trybedex_db
+        image: mysql
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: password
