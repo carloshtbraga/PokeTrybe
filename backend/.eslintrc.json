@@ -7,13 +7,13 @@
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "backend/tsconfig.json"
+        "project": "./tsconfig.json"
     },
     "rules": {
         "@typescript-eslint/indent": ["error", 4],
         "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/quotes": ["error", "single"],
         "@typescript-eslint/space-before-function-paren": ["error", "never"],
-        "@typescript-eslint/member-delimiter-style": "semi"
+        "@typescript-eslint/member-delimiter-style": "off"
     }
 }
