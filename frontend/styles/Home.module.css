@@ -1,0 +1,62 @@
+.title_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bg {
+  background-color: #333;
+}
+
+.title {
+  color: rgb(0, 168, 0);
+  font-size: 3em;
+  text-align: center;
+  margin-right: .4em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.title span {
+  color: #141414;
+  ;
+}
+
+.pokemon_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+
+
+}
+
+.select{
+  background-color: #222222;
+  color: lightgray;
+  padding: .1em;
+  height: 27px;
+  
+}
+
+.nome {
+  padding: .1em;
+  width: 300px;
+  background-color: #222222;
+  height: 25px;
+  color: white;
+  margin-right: .3em;
+}
+
+.img{
+  border-radius: 5px;
+  }
