@@ -1,54 +1,54 @@
-import { DataTypes, Model, QueryInterface } from 'sequelize';
-import { IPerson } from '@interfaces';
+import { DataTypes, type Model, type QueryInterface } from 'sequelize';
+import { type IPerson } from '@interfaces';
 
 export default {
-    up(queryInterface: QueryInterface) {
-        return queryInterface.createTable<Model<IPerson>>('people', {
+    async up(queryInterface: QueryInterface) {
+        await queryInterface.createTable<Model<IPerson>>('people', {
             id: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
                 primaryKey: true,
-                autoIncrement: true,
+                autoIncrement: true
             },
             name: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             classId: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
                 references: {
                     model: 'classes',
-                    key: 'id',
+                    key: 'id'
                 },
                 field: 'class_id',
                 onDelete: 'cascade',
-                onUpdate: 'cascade',
+                onUpdate: 'cascade'
             },
             city: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             alias: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             picture: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             phrase: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             animal: {
                 type: DataTypes.STRING,
-                allowNull: false,
-            },
+                allowNull: false
+            }
         });
     },
 
-    down(queryInterface: QueryInterface) {
-        return queryInterface.dropTable('people');
-    },
+    async down(queryInterface: QueryInterface) {
+        await queryInterface.dropTable('people');
+    }
 };

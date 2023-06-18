@@ -1,9 +1,9 @@
-import { DataTypes, Model, QueryInterface } from 'sequelize';
-import { IPersonSkill } from '@interfaces';
+import { DataTypes, type Model, type QueryInterface } from 'sequelize';
+import { type IPersonSkill } from '@interfaces';
 
 export default {
-    up(queryInterface: QueryInterface) {
-        return queryInterface.createTable<Model<IPersonSkill>>('people_skills', {
+    async up(queryInterface: QueryInterface) {
+        await queryInterface.createTable<Model<IPersonSkill>>('people_skills', {
             personId: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
@@ -33,7 +33,7 @@ export default {
         });
     },
 
-    down(queryInterface: QueryInterface) {
-        return queryInterface.dropTable('people_skills');
-    },
+    async down(queryInterface: QueryInterface) {
+        await queryInterface.dropTable('people_skills');
+    }
 };
