@@ -1,5 +1,5 @@
 import { type IClass } from '@interfaces';
 
-export default interface MClass {
+export interface IClassModel {
     getAll: () => Promise<IClass[]>;
 }

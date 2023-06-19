@@ -1,2 +1,2 @@
 export * from './IClass';
-export * from './Class.schema';
+export * from './IClass.model';
