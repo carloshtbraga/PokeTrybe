@@ -1,10 +1,12 @@
-import { type IPerson, type IPersonSkill } from './person';
+import { type IPerson, type IPersonSkill, type IPersonModel } from './person';
 import { type ISkill } from './skill';
-import { type IClass } from './class';
+import { type IClass, type IClassModel } from './class';
 
 export type {
     IClass,
     IPerson,
     ISkill,
-    IPersonSkill
+    IPersonSkill,
+    IPersonModel,
+    IClassModel
 };
