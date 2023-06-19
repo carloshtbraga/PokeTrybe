@@ -1,3 +1,2 @@
-import { type IClass } from './IClass';
-
-export type { IClass };
+export * from './IClass';
+export * from './Class.schema';
