@@ -8,7 +8,6 @@ export default {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
                 primaryKey: true,
-                autoIncrement: true,
                 references: {
                     model: 'people',
                     key: 'id'
@@ -21,7 +20,6 @@ export default {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
                 primaryKey: true,
-                autoIncrement: true,
                 references: {
                     model: 'skills',
                     key: 'id'
