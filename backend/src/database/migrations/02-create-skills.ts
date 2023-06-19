@@ -1,23 +1,23 @@
-import { DataTypes, Model, QueryInterface } from 'sequelize';
-import { ISkill } from '@interfaces';
+import { DataTypes, type Model, type QueryInterface } from 'sequelize';
+import { type ISkill } from '@interfaces';
 
 export default {
-    up(queryInterface: QueryInterface) {
-        return queryInterface.createTable<Model<ISkill>>('skills', {
+    async up(queryInterface: QueryInterface) {
+        await queryInterface.createTable<Model<ISkill>>('skills', {
             id: {
                 type: DataTypes.INTEGER.UNSIGNED,
                 allowNull: false,
                 primaryKey: true,
-                autoIncrement: true,
+                autoIncrement: true
             },
             name: {
                 type: DataTypes.INTEGER.UNSIGNED,
-                allowNull: false,
+                allowNull: false
             }
         });
     },
 
-    down(queryInterface: QueryInterface) {
-        return queryInterface.dropTable('skills');
-    },
+    async down(queryInterface: QueryInterface) {
+        await queryInterface.dropTable('skills');
+    }
 };
