@@ -11,7 +11,7 @@ export default {
                 autoIncrement: true
             },
             name: {
-                type: DataTypes.INTEGER.UNSIGNED,
+                type: DataTypes.STRING(50),
                 allowNull: false
             }
         });
