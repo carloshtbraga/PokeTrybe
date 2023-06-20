@@ -8,7 +8,7 @@ export default {
                 {
                     id: '01',
                     name: 'José Gomes',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['html'],
                     alias: 'Loreal',
                     animal: 'Cachorro',
@@ -19,7 +19,7 @@ export default {
                 {
                     id: '02',
                     name: 'Gersinei Santos',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['html'],
                     alias: 'GG Rotam',
                     animal: 'Cachorro',
@@ -30,7 +30,7 @@ export default {
                 {
                     id: '03',
                     name: 'Pablo Landim',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['html'],
                     alias: 'Pablito',
                     animal: 'Cachorro',
@@ -41,7 +41,7 @@ export default {
                 {
                     id: '04',
                     name: 'Carlos Tonini',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'PYTHON'],
                     alias: 'Carlinhos',
                     animal: 'Gato',
@@ -52,7 +52,7 @@ export default {
                 {
                     id: '05',
                     name: 'Matheus Camargo',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'DART', 'FLUTTER', 'REACT'],
                     alias: 'Matheus',
                     animal: 'Cachorro',
@@ -63,7 +63,7 @@ export default {
                 {
                     id: '06',
                     name: 'Alex Nunes',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'PYTHON'],
                     alias: 'alex === figma',
                     animal: 'Gato',
@@ -74,7 +74,7 @@ export default {
                 {
                     id: '07',
                     name: 'Walber Vaz da Silva',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'PYTHON', 'JAVA', 'REACT', 'TYPESCRIPT'],
                     alias: 'w2k',
                     animal: 'Cachorro',
@@ -85,7 +85,7 @@ export default {
                 {
                     id: '08',
                     name: 'Daniel Cintori',
-                    class_id: '27-A',
+                    class_id: 27,
                     // types: ['JS', 'PYTHON', 'JAVA', 'C', 'C++'],
                     alias: 'DaniBoy',
                     animal: 'Cachorro',
@@ -97,7 +97,7 @@ export default {
                 {
                     id: '09',
                     name: 'Rafaela Granato',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS'],
                     alias: 'Rafa',
                     animal: 'Gato',
@@ -108,7 +108,7 @@ export default {
                 {
                     id: '10',
                     name: 'Artur',
-                    class_id: '27-A',
+                    class_id: 27,
                     // types: ['JS', 'JAVA', 'SQL', 'TYPESCRIPT', 'NODE'],
                     alias: 'rutra',
                     animal: 'Cachorro',
@@ -119,7 +119,7 @@ export default {
                 {
                     id: '11',
                     name: 'Washington Gama',
-                    class_id: '24-A',
+                    class_id: 24,
                     // types: ['Javascript', 'Typescript', 'JAVA', 'Python', 'Portugol'],
                     alias: 'Cumpadi Wash',
                     animal: 'Corvo',
@@ -130,7 +130,7 @@ export default {
                 {
                     id: '12',
                     name: 'Débora Marim',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'MySQL', 'React', 'Redux'],
                     alias: 'Debs',
                     animal: 'Gato',
@@ -141,7 +141,7 @@ export default {
                 {
                     id: '13',
                     name: 'Camilla Skaff',
-                    class_id: '27-B',
+                    class_id: 27,
                     // types: ['JS', 'MySQL', 'React', 'Redux'],
                     alias: 'Camilinha',
                     animal: 'Coelho',
@@ -152,7 +152,7 @@ export default {
                 {
                     id: '14',
                     name: 'Maíza Dantas',
-                    class_id: '27-A',
+                    class_id: 27,
                     // types: ['JS', 'MySQL', 'React', 'Redux'],
                     alias: 'MDV',
                     animal: 'Bulbassauro - Polho',
@@ -163,9 +163,7 @@ export default {
             ], {}
         );
     },
-
     down: async(queryInterface: QueryInterface) => {
         await queryInterface.bulkDelete('people', {});
     }
-
 };
