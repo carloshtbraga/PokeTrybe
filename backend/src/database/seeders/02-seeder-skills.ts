@@ -31,7 +31,9 @@ export default {
             { name: 'Ableton Live' }, { name: 'Audacity' }, { name: 'Audition' },
             { name: 'Reaper' }, { name: 'Cubase' }, { name: 'Reason' },
             { name: 'Bitwig' }, { name: 'GarageBand' }, { name: 'FL Studio' },
-            { name: 'Ardour' }, { name: 'LMMS' }
+            { name: 'Ardour' }, { name: 'LMMS' }, { name: 'Shell' },
+            { name: 'PowerShell' }, { name: 'Zsh' }, { name: 'FLUTTER' },
+            { name: 'DART' }, { name: 'Portugol' }
         ], {}
         );
     },
