@@ -6,10 +6,12 @@ import {
     type CreationOptional
 } from 'sequelize';
 import db from '.';
+import Class from './Class';
 
 class Person extends Model<InferAttributes<Person>, InferCreationAttributes<Person>> {
     declare id: CreationOptional<number>;
     declare name: string;
+    declare classId: number;
     declare city: string;
     declare alias?: string;
     declare picture?: string;
@@ -27,6 +29,15 @@ Person.init({
     name: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    classId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: 'class_id',
+        references: {
+            model: 'classes',
+            key: 'id'
+        }
     },
     city: {
         type: DataTypes.STRING,
@@ -51,8 +62,13 @@ Person.init({
 }, {
     sequelize: db,
     modelName: 'people',
-    timestamps: true,
+    timestamps: false,
     underscored: true
+});
+
+Person.belongsTo(Class, {
+    foreignKey: 'classId',
+    as: 'class'
 });
 
 export default Person;
