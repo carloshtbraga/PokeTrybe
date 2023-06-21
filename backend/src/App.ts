@@ -1,10 +1,11 @@
 import express from 'express';
+import router from './routers/people.router';
 
 class App {
     constructor(
         // inicializa o express
         private readonly _app = express()
-    ) { }
+    ) {}
 
     private createRoutes(): void {
         // cria uma rota de teste
@@ -21,6 +22,8 @@ class App {
         this.useMiddlewares(); // aplica os middlewares
 
         this.createRoutes(); // cria as rotas
+
+        this._app.use(router);
 
         // inicia o servidor, ouvindo na porta especificada
         this._app.listen(port, () => {
