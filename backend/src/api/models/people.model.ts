@@ -7,11 +7,7 @@ export default class PeopleModel {
 
     public async getall(): Promise<IPerson[]> {
         const people = await this.person.findAll({
-            include: [{
-                model: Class,
-                as: 'class',
-                attributes: ['number']
-            }]
+            include: [{ model: Class, as: 'class', attributes: ['number'] }]
         });
         return people;
     }
