@@ -6,6 +6,7 @@ import {
     type CreationOptional
 } from 'sequelize';
 import db from '.';
+import Person from './Person';
 
 class Class extends Model<InferAttributes<Class>, InferCreationAttributes<Class>> {
     declare id: CreationOptional<number>;
@@ -28,6 +29,11 @@ Class.init({
     modelName: 'classes',
     timestamps: false,
     underscored: true
+});
+
+Class.hasMany(Class, {
+    foreignKey: 'id',
+    as: 'class'
 });
 
 export default Class;
