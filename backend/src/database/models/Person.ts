@@ -7,6 +7,7 @@ import {
 } from 'sequelize';
 import db from '.';
 import Class from './Class';
+import Skill from './Skill';
 
 class Person extends Model<InferAttributes<Person>, InferCreationAttributes<Person>> {
     declare id: CreationOptional<number>;
@@ -69,6 +70,19 @@ Person.init({
 Person.belongsTo(Class, {
     foreignKey: 'classId',
     as: 'class'
+// crias a tabela de relacionamento entre as tabelas people e skills
+Person.belongsToMany(Skill, {
+    through: 'people_skills',
+    as: 'skills',
+    foreignKey: 'person_id',
+    otherKey: 'skill_id'
+});
+
+Skill.belongsToMany(Person, {
+    through: 'people_skills',
+    as: 'people',
+    foreignKey: 'skill_id',
+    otherKey: 'person_id'
 });
 
 export default Person;
