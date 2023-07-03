@@ -10,7 +10,6 @@ services:
         # inicia a imagem em modo interativo, com o terminal aberto e executa o comando npm run dev
         tty: true
         stdin_open: true
-        command: npm run dev
         image: trybedex
         # reinicia a imagem caso ela pare
         restart: always
@@ -22,7 +21,7 @@ services:
             - db
         # expõe as portas da aplicação
         ports:
-            - 3000:3000
+            - 3001:3001
         # configura variáveis de ambiente
         environment:
             DB_USER: root

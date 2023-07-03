@@ -1,4 +1,12 @@
-export * from './IPerson';
-export * from './IPersonSkill';
-export * from './IPerson.model';
-export * from './IPersonSkill.model';
+import { IPerson, IPersonWithSkills } from './IPerson';
+import { IPersonSkill } from './IPersonSkill';
+import { IPersonModel } from './IPerson.model';
+import { IPersonSkillModel } from './IPersonSkill.model';
+
+export {
+    IPerson,
+    IPersonWithSkills,
+    IPersonSkill,
+    IPersonModel,
+    IPersonSkillModel
+};

@@ -3,6 +3,7 @@ import {
 } from './person';
 import { type ISkill, type ISkillModel } from './skill';
 import { type IClass, type IClassModel } from './class';
+import { ServiceResponse, ServiceMessage, ServiceResponseError, ServiceResponseSuccess } from './ServiceResponse';
 
 export type {
     IClass,
@@ -12,5 +13,9 @@ export type {
     IPersonModel,
     IClassModel,
     ISkillModel,
-    IPersonSkillModel
+    IPersonSkillModel,
+    ServiceResponse,
+    ServiceMessage,
+    ServiceResponseError,
+    ServiceResponseSuccess
 };

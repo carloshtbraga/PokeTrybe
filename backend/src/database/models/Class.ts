@@ -26,7 +26,7 @@ Class.init({
 }, {
     sequelize: db,
     modelName: 'classes',
-    timestamps: true,
+    timestamps: false,
     underscored: true
 });
 

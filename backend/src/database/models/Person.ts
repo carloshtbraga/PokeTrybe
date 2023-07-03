@@ -3,10 +3,14 @@ import {
     Model,
     type InferAttributes,
     type InferCreationAttributes,
-    type CreationOptional
+    type CreationOptional,
+    type NonAttribute
 } from 'sequelize';
 import db from '.';
+import { type IClass, type ISkill } from '@interfaces';
 import Skill from './Skill';
+import Class from './Class';
+import PersonSkill from './PersonSkill';
 
 class Person extends Model<InferAttributes<Person>, InferCreationAttributes<Person>> {
     declare id: CreationOptional<number>;
@@ -16,6 +20,8 @@ class Person extends Model<InferAttributes<Person>, InferCreationAttributes<Pers
     declare picture?: string;
     declare phrase?: string;
     declare animal?: string;
+    declare skills?: NonAttribute<Partial<ISkill[]>>;
+    declare classNumber?: NonAttribute<Partial<IClass>>;
 }
 
 Person.init({
@@ -52,23 +58,29 @@ Person.init({
 }, {
     sequelize: db,
     modelName: 'people',
-    timestamps: true,
+    timestamps: false,
     underscored: true
 });
 
 // crias a tabela de relacionamento entre as tabelas people e skills
 Person.belongsToMany(Skill, {
-    through: 'people_skills',
+    through: PersonSkill,
     as: 'skills',
     foreignKey: 'person_id',
     otherKey: 'skill_id'
 });
 
 Skill.belongsToMany(Person, {
-    through: 'people_skills',
+    through: PersonSkill,
     as: 'people',
     foreignKey: 'skill_id',
     otherKey: 'person_id'
+});
+
+// cria o relacionamento entre as tabelas people e classes
+Person.belongsTo(Class, {
+    as: 'classNumber',
+    foreignKey: 'class_id'
 });
 
 export default Person;
