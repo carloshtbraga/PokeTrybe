@@ -72,28 +72,25 @@ Person.init({
     underscored: true
 });
 
-Person.belongsTo(Class, {
-    foreignKey: 'classId',
-    as: 'class'
 // crias a tabela de relacionamento entre as tabelas people e skills
 Person.belongsToMany(Skill, {
-        through: PersonSkill,
-        as: 'skills',
-        foreignKey: 'person_id',
-        otherKey: 'skill_id'
-    });
+    through: PersonSkill,
+    as: 'skills',
+    foreignKey: 'person_id',
+    otherKey: 'skill_id'
+});
 
-    Skill.belongsToMany(Person, {
-        through: PersonSkill,
-        as: 'people',
-        foreignKey: 'skill_id',
-        otherKey: 'person_id'
-    });
+Skill.belongsToMany(Person, {
+    through: PersonSkill,
+    as: 'people',
+    foreignKey: 'skill_id',
+    otherKey: 'person_id'
+});
 
-    // cria o relacionamento entre as tabelas people e classes
-    Person.belongsTo(Class, {
-        as: 'classNumber',
-        foreignKey: 'class_id'
-    });
+// cria o relacionamento entre as tabelas people e classes
+Person.belongsTo(Class, {
+    as: 'classNumber',
+    foreignKey: 'class_id'
+});
 
-    export default Person;
+export default Person;

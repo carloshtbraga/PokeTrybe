@@ -10,7 +10,7 @@ export default class PersonController {
     public getAll(_req: Request, res: Response): void {
         this._personService.getAll()
             .then((data) => {
-                res.status(200).json(data);
+                res.status(200).json(data.data);
             })
             .catch((err) => {
                 res.status(500).json(err);

@@ -1,12 +1,10 @@
-import {
-    Router,
-    type RequestHandler
-} from 'express';
-import PeopleController from '../api/controllers/people.controller';
+import { Router } from 'express';
+import PersonController from '../api/controllers/Person.controller';
 
 const router = Router();
-const peopleController = new PeopleController();
 
-router.get('/p', peopleController.getAll.bind(peopleController) as RequestHandler);
+const personController = new PersonController();
+
+router.get('/', (req, res) => personController.getAll(req, res));
 
 export default router;
