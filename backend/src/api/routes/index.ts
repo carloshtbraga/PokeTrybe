@@ -3,6 +3,6 @@ import peopleRouter from './people.router';
 
 const router = Router();
 
-router.use('/people', peopleRouter);
+router.use('/trybers', peopleRouter);
 
 export default router;
