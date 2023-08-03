@@ -6,18 +6,18 @@ import styles from '../styles/Card.module.css'
 
 export default function Card({ trybers }) {
   const myLoader=()=>{
-    return trybers.pic;
+    return trybers.picture;
   }
   
   return (
     <div className={styles.card}>
       <Image
         loader={myLoader}
-        src={trybers.pic}
+        src={trybers.picture}
         width='150'
         height='150' 
         />
-      <p className={styles.id}>#{trybers.turma}</p>
+      <p className={styles.id}>#{trybers.classNumber}</p>
       <h3 className={styles.title}>{trybers.name}</h3>
       <Link legacyBehavior href={`/tryber/${trybers.id}`}><a className={styles.btn}>Detalhes</a></Link>
     </div>

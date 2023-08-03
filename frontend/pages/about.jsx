@@ -14,7 +14,7 @@ export default function about() {
           No momento esse projeto mapeia um objetão local, a idéia é conforme o curso avance em front-end a gente possa tornar todo o sistema de cadastro de novos alunos dentro da própria aplicação para que os usuários possam fazer um CRUD com seu perfil.</p>
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <Image
-          src={trybers[3].pic}
+          src={trybers[3].picture}
           height='150'
           width='150'
           alt='Carlin kkk'
@@ -23,7 +23,7 @@ export default function about() {
 
 
         <Image
-          src={trybers[0].pic}
+          src={trybers[0].picture}
           height='150'
           width='150'
           alt='Gerddicleykkk'

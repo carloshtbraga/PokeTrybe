@@ -1,22 +1,26 @@
 import Image from 'next/image';
 import styles from '../../styles/Pokemon.module.css';
-import { trybers } from '../api/hello';
+import { getTrybers } from '@/utils/queries';
 
 export const getStaticPaths = async () => {
     // repete o primeiro fetch
-      const paths = trybers.map((trybe) => {
-        return {
-            params: { tryberid: trybe.id }
-        }
-    })
+    const trybers = await getTrybers();
+
+    const paths = trybers.map((trybe) => {
+      return {
+          params: { tryberid: trybe.id.toString() },
+   }
+    });
+
     return {
         paths,
-        fallback: false
-    }
-}
+        fallback: false,
+    };
+};
 
 export const getStaticProps = async ({params}) => {
-    const trybe = trybers.find((trybe) => trybe.id === params.tryberid )
+    const trybers = await getTrybers();
+    const trybe = trybers.find((trybe) => trybe.id.toString() === params.tryberid )
     return {
         props: { trybe }
     }
@@ -29,22 +33,22 @@ export default function Trybe({ trybe }) {
         <p>Mais conhecido como: {trybe.alias}</p>
         <br />
         <Image 
-        src={trybe.pic}
+        src={trybe.picture}
         width='300'
         height='300'
         alt={trybe.name}
         className={styles.pic}
         />
         <h3>Frase Favorita:</h3>
-          <p>"{trybe.frase}"</p>
+          <p>"{trybe.phrase}"</p>
         <div>
           <h3>Turma:</h3>
-          <p>{trybe.turma}</p>
+          <p>{trybe.classNumber}</p>
         </div>
         <div>
           <h3>Habilidades:</h3>
           <div className={styles.types_container}>
-            {trybe.types.map((item, index) => (
+            {trybe.skills.map((item, index) => (
               <span
                 key={index}
                 className={`${styles.type}`} 
@@ -63,7 +67,7 @@ export default function Trybe({ trybe }) {
           <div className={styles.data_weight}>
             <h3>Localização:</h3>
            
-            <p>{trybe.cidade}</p>
+            <p>{trybe.city}</p>
           </div>
         </div>
       </div>

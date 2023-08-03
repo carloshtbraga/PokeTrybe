@@ -1,28 +1,34 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 import Card from '@/components/Card'
-import { trybers } from './api/hello'
 import { useState } from 'react';
+import { getTrybers } from '@/utils/queries';
 
+export async function getStaticProps() {
+  const trybers = await getTrybers();
+  return {
+    props: {
+      trybers,
+    },
+  };
+}
 
-
-
-export default function Home() {
+export default function Home({ trybers }) {
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("");
 
   const filtered = trybers.filter((tryber) => {
     const nameMatch = tryber.name.toLowerCase().includes(search.toLowerCase());
-    const turmaMatch = selectedType ? tryber.turma === selectedType : true;
+    const turmaMatch = selectedType ? tryber.classNumber === selectedType : true;
     return nameMatch && turmaMatch;
   });
 
   const turmaTypes = {};
 
   const turmaOptions = trybers.map((tryber) => {
-    if (!turmaTypes.hasOwnProperty(tryber.turma)) {
-      turmaTypes[tryber.turma] = true;
-      return <option key={tryber.name}>{tryber.turma}</option>;
+    if (!turmaTypes.hasOwnProperty(tryber.classNumber)) {
+      turmaTypes[tryber.classNumber] = true;
+      return <option key={tryber.name}>{tryber.classNumber}</option>;
     }
     return null;
   });
