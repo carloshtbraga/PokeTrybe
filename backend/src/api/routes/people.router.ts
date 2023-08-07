@@ -9,4 +9,8 @@ router.get('/', (req: Request, res: Response) => {
     peopleController.getAll(req, res);
 });
 
+router.post('/', (req: Request, res: Response) => {
+    peopleController.insert(req, res);
+});
+
 export default router;
