@@ -18,11 +18,22 @@ export default class PersonController {
             });
     }
 
-    public insert(req: Request, res: Response): void {
+    public insertPerson(req: Request, res: Response): void {
         log(req.body);
-        this._personService.insert(req.body)
+        this._personService.insertPerson(req.body)
             .then((data) => {
                 res.status(201).json(data.data);
+            })
+            .catch((err) => {
+                res.status(500).json(err);
+            });
+    }
+
+    public deletePerson(req: Request, res: Response): void {
+        const id = Number(req.params.id);
+        this._personService.deletePerson(id)
+            .then((data) => {
+                res.status(200).json(data.data);
             })
             .catch((err) => {
                 res.status(500).json(err);

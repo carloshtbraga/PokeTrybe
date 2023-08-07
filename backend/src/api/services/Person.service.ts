@@ -13,10 +13,18 @@ export default class PersonService {
         return { status: 'SUCCESSFUL', data: people };
     }
 
-    public async insert(person: any): Promise<ServiceResponse<IPersonWithSkills>> {
+    public async insertPerson(person: any): Promise<ServiceResponse<IPersonWithSkills>> {
         person.classId = person.classNumber;
         delete person.classNumber; // ! remover essas 2 linhas assim que recever a chave correta
-        const newPerson = await this._personModel.insert(person);
+        const newPerson = await this._personModel.insertPerson(person);
         return { status: 'SUCCESSFUL', data: newPerson };
+    }
+
+    public async deletePerson(id: number): Promise<ServiceResponse<string>> {
+        const deletedPerson = await this._personModel.deletePerson(id);
+        if (deletedPerson === undefined) {
+            return { status: 'NOT_FOUND', data: { message: 'Person not found' } };
+        }
+        return { status: 'SUCCESSFUL', data: `${deletedPerson} was deleted` };
     }
 }

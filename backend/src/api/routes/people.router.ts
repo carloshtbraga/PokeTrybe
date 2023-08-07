@@ -10,7 +10,11 @@ router.get('/', (req: Request, res: Response) => {
 });
 
 router.post('/', (req: Request, res: Response) => {
-    peopleController.insert(req, res);
+    peopleController.insertPerson(req, res);
+});
+
+router.delete('/:id', (req: Request, res: Response) => {
+    peopleController.deletePerson(req, res);
 });
 
 export default router;

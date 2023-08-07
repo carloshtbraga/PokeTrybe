@@ -1,4 +1,4 @@
-import { IPersonSkill, type IClass, type ISkill } from '@interfaces';
+import { type IPersonSkill, type IClass, type ISkill } from '@interfaces';
 import Class from '../../database/models/Class';
 import Person from '../../database/models/Person';
 import Skill from '../../database/models/Skill';
@@ -58,7 +58,7 @@ export default class PersonModel implements IPersonModel {
         );
     }
 
-    public async insert(person: any): Promise<IPersonWithSkills> {
+    public async insertPerson(person: any): Promise<IPersonWithSkills> {
         const newPerson = await this._model.create(person);
         const skills = await Promise.all(
             person.skills.map(async(skill: any) => {
@@ -90,5 +90,11 @@ export default class PersonModel implements IPersonModel {
             animal: newPerson.animal,
             phrase: newPerson.phrase
         };
+    }
+
+    public async deletePerson(id: number): Promise<string | undefined> {
+        const person = await this._model.findByPk(id);
+        await this._model.destroy({ where: { id } });
+        return person?.name;
     }
 }
