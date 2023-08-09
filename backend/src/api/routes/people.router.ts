@@ -9,6 +9,10 @@ router.get('/', (req: Request, res: Response) => {
     peopleController.getAll(req, res);
 });
 
+router.get('/:id', (req: Request, res: Response) => {
+    peopleController.getPersonById(req, res);
+});
+
 router.post('/', (req: Request, res: Response) => {
     peopleController.insertPerson(req, res);
 });

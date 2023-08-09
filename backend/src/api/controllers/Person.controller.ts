@@ -18,6 +18,17 @@ export default class PersonController {
             });
     }
 
+    public getPersonById(req: Request, res: Response): void {
+        const id = Number(req.params.id);
+        this._personService.getPersonById(id)
+            .then((data) => {
+                res.status(200).json(data.data);
+            })
+            .catch((err) => {
+                res.status(500).json(err);
+            });
+    }
+
     public insertPerson(req: Request, res: Response): void {
         log(req.body);
         this._personService.insertPerson(req.body)

@@ -16,21 +16,13 @@ export default class PersonModel implements IPersonModel {
     public async getAll(): Promise<IPersonWithSkills[]> {
         const people = await this._model.findAll({
             include: [
-                {
-                    model: Skill,
-                    as: 'skills',
-                    attributes: ['name']
-                },
-                {
-                    model: Class,
-                    as: 'classNumber',
-                    attributes: ['number']
-                }
+                { model: Skill, as: 'skills', attributes: ['name'] },
+                { model: Class, as: 'classNumber', attributes: ['number'] }
             ]
         });
 
-        return people.map(
-            ({
+        const formatedPeople = people.map((person) => {
+            const {
                 id,
                 name,
                 city,
@@ -40,29 +32,70 @@ export default class PersonModel implements IPersonModel {
                 alias,
                 animal,
                 phrase
-            }) => {
-                return {
-                    id,
-                    name,
-                    city,
-                    picture,
-                    classNumber: classNumber?.number as Partial<IClass>,
-                    skills: skills?.map((skill) => skill?.name) as Partial<
-                    ISkill[]
-                    >,
-                    alias,
-                    animal,
-                    phrase
-                };
-            }
-        );
+            } = person;
+
+            const formattedSkills = skills?.map((skill) => skill?.name) ?? [];
+            const formattedClassNumber = classNumber?.number;
+
+            return {
+                id,
+                name,
+                city,
+                picture,
+                classNumber: formattedClassNumber,
+                skills: formattedSkills,
+                alias,
+                animal,
+                phrase
+            };
+        });
+
+        return formatedPeople as IPersonWithSkills[];
+    }
+
+    public async getPersonById(id: number): Promise<IPersonWithSkills | null> {
+        const person = await this._model.findByPk(id, {
+            include: [
+                { model: Skill, as: 'skills', attributes: ['name'] },
+                { model: Class, as: 'classNumber', attributes: ['number'] }
+            ]
+        });
+
+        if (person == null) {
+            return null;
+        }
+
+        const {
+            name,
+            city,
+            picture,
+            classNumber,
+            skills,
+            alias,
+            animal,
+            phrase
+        } = person;
+
+        const formattedSkills = skills?.map((skill) => skill?.name) ?? [];
+        const formattedClassNumber = classNumber?.number;
+
+        return {
+            id,
+            name,
+            city,
+            picture,
+            classNumber: formattedClassNumber as Partial<IClass>,
+            skills: formattedSkills as Partial<ISkill[]>,
+            alias,
+            animal,
+            phrase
+        };
     }
 
     public async insertPerson(person: any): Promise<IPersonWithSkills> {
         const newPerson = await this._model.create(person);
         const skills = await Promise.all(
             person.skills.map(async(skill: any) => {
-                console.log('skill aqui', skill);
                 const id = await this._skill.findOrCreate({
                     where: { name: skill }
                 });

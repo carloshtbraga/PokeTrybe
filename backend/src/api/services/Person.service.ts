@@ -13,6 +13,14 @@ export default class PersonService {
         return { status: 'SUCCESSFUL', data: people };
     }
 
+    public async getPersonById(id: number): Promise<ServiceResponse<IPersonWithSkills | null>> {
+        const person = await this._personModel.getPersonById(id);
+        if (person === null) {
+            return { status: 'NOT_FOUND', data: { message: 'Person not found' } };
+        }
+        return { status: 'SUCCESSFUL', data: person };
+    }
+
     public async insertPerson(person: any): Promise<ServiceResponse<IPersonWithSkills>> {
         person.classId = person.classNumber;
         delete person.classNumber; // ! remover essas 2 linhas assim que recever a chave correta
